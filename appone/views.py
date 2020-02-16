@@ -5,6 +5,11 @@ from rest_framework.viewsets import ModelViewSet
 from rest_framework.permissions import BasePermission,IsAuthenticated,IsAdminUser,AllowAny,IsAuthenticatedOrReadOnly
 
 
+#def Testops():
+    #return "Hello World"
+def test():
+    pass
+
 class CustomPermission(BasePermission):
     def has_permission(self, request, view):
         return int(request.data['stage']) > 30
